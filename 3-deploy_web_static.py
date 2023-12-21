@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Fabfile to create and distribute an archive to a web server.
+#execute: fab -f 3-deploy_web_static.py deploy -i ~/.ssh/id_rsa -u ubuntu
 import os.path
 from datetime import datetime
 from fabric.api import env
@@ -7,7 +8,7 @@ from fabric.api import local
 from fabric.api import put
 from fabric.api import run
 
-env.hosts = ["104.196.168.90", "35.196.46.172"]
+env.hosts = ["52.91.116.195", "54.161.188.252"]
 
 
 def do_pack():
