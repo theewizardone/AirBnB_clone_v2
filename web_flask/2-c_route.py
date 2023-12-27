@@ -25,12 +25,15 @@ def hbnb():
 
 
 @app.route("/c/<text>", strict_slashes=False)
-def c(text):
+def c_with_text(text):
     """Displays 'C' followed by the value of <text>."""
-    text = text.replace("_", " ")
+    #Replace underscores with spaces in the text variable
+  formatted_text = text.replace("_", " ")
     return "C {}".format(text)
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    #start the flask development server
+    #Listen on all available network interfaces (0.0.0.0) and port 5000
+    app.run(host="0.0.0.0",  port=5000)
 
